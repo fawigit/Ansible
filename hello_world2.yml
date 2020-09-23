@@ -1,7 +1,6 @@
-- name: Hello World!
-  hosts: all
-
+- hosts: all
+  gather_facts: true
+  become: true
   tasks:
-
-  - name: Hello World!
-    bash: echo "Hi! Tower is working!"
+    - yum:
+        name: bind-utils
